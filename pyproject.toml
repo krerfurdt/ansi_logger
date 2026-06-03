@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ansi_logger"
+version = "0.2.0"
+authors = [{ name="Kevin Erfurdt", email="kevin.erfurdt@gmail.com" }]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "typing_extensions>=4.8",
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+description = "Standardized tty notification and file logging for local apps"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+ansi_logger = ["py.typed"]
